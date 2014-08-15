@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Tag: Translation | 译林</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description">
+<meta property="og:type" content="website">
+<meta property="og:title" content="译林">
+<meta property="og:url" content="http://modernsick.github.io/tags/Translation/">
+<meta property="og:site_name" content="译林">
+<meta property="og:description">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="译林">
+<meta name="twitter:description">
+<link rel="publisher" href="106095858443703270000">
+
+  
+    <link rel="alternative" href="/atom.xml" title="译林" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+  <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-53221362-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">译林</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">坚持，就是胜利</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="http://www.baidu.com/baidu" method="get" accept-charset="utf-8" class="search-form">
+          <input type="search" name="word" maxlength="20" class="search-form-input" placeholder="Search">
+          <input type="submit" value="" class="search-form-submit">
+          <input name=tn type=hidden value="bds">
+          <input name=cl type=hidden value="3">
+          <input name=ct type=hidden value="2097152">
+          <input type="hidden" name="si" value="modernsick.github.io">
+        </form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-2014-08-14-Web-Service-Monitor-101" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014-08-14-Web-Service-Monitor-101.html" class="article-date">
+  <time datetime="2014-08-15T05:15:20.000Z" itemprop="datePublished">8月 14 2014</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Translation/">Translation</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014-08-14-Web-Service-Monitor-101.html">网络服务监控101：识别不良部署</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://www.jobbole.com/members/strongme" target="_blank" rel="external">Strongme</a>翻译自<a href="http://apmblog.compuware.com/2014/05/28/web-service-monitoring-101-identifying-bad-deployments/" target="_blank" rel="external">Andreas Grabner </a> 来自<a href="http://www.jobbole.com/" target="_blank" rel="external">ImportNew</a>   </p>
+<p>你是否曾经往服务器发布更新的时候想，“一切正常，如期运行！”然后你却必须一直处理用户的抱怨：为什么你们的系统总是报错？   </p>
+<p><img src="http://apmblog.compuware.com/wp-content/uploads/2014/05/IRS_Server_Cartoon1-600x186.png">   </p>
+<p>我们最近正在两个数据中心之间迁移一些系统服务，甚至把一些组件放到了公有云上面。一切准备就绪，系统监控也设置妥当，每个人几乎是 竖着拇指开始行动的。紧接着，系统操控面板持续的输出愉悦的绿色监控信息。不久一个同事就跟我抱怨说：他怎么都无法使用我们迁移过的服务中的一个（免费<a href="http://www.compuware.com/en_us/application-performance-management/products/ajax-free-edition/overview.html" target="_blank" rel="external">dynaTrace AJAX Edition</a>），好像是认证网络服务失败了。这时，我们就列出以下几个需要考虑的问题：  </p>
+<ul>
+<li>影响：这个问题是只有他的帐号出现还是影响了更多的用户？</li>
+<li>根源问题：根源问题出现在哪？为什么会出现这样的问题？</li>
+<li>预警：为什么我们的操作监控面包没有报出任何网络服务失败的信息？ 
+        
+          <p class="article-more-link">
+            <a href="/2014-08-14-Web-Service-Monitor-101.html#more">阅读全文</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://modernsick.github.io/2014-08-14-Web-Service-Monitor-101.html" data-id="ecpbidivhl1mtib5" class="article-share-link">分享到</a>
+      
+        <a href="http://modernsick.github.io/2014-08-14-Web-Service-Monitor-101.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ImportNew/">ImportNew</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Translation/">Translation</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2014-08-14-Java-String-Top10" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014-08-14-Java-String-Top10.html" class="article-date">
+  <time datetime="2014-08-15T04:15:20.000Z" itemprop="datePublished">8月 14 2014</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Translation/">Translation</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014-08-14-Java-String-Top10.html">Top10 - Java中关于String类型的10个问题</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-_如何比较两个字符串？用“=”还是equals">1. 如何比较两个字符串？用“=”还是equals</h2>
+<p>简单来说，“==”是用来检测俩引用是不是指向内存中的同一个对象，而equals()方法则检测的是两个对象的值是否相等。只要你项检测俩字符串是不是相等的，你就必须得用equals()方法。   </p>
+<p>如果你自己到“字符串保留(string intern)”的概念那就更好了。   </p>
+<h2 id="2-_为什么安全敏感的字符串信息用char[]会比String对象更好？">2. 为什么安全敏感的字符串信息用char[]会比String对象更好？</h2>
+<p>String对象是不可变的就意味着直到垃圾回收器过来清扫之前它们都不会发生变化的。用数组的话，就可以很明确的修改它任何位置的字符元素。这样的话，如密码等安全敏感的信息就不会出现在系统的任何地方。<br>
+        
+          <p class="article-more-link">
+            <a href="/2014-08-14-Java-String-Top10.html#more">阅读全文</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://modernsick.github.io/2014-08-14-Java-String-Top10.html" data-id="gvij60u34ejajgz2" class="article-share-link">分享到</a>
+      
+        <a href="http://modernsick.github.io/2014-08-14-Java-String-Top10.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java-Basics/">Java-Basics</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/String/">String</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Translation/">Translation</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2014-08-13-OpenSource-OpenResume" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014-08-13-OpenSource-OpenResume.html" class="article-date">
+  <time datetime="2014-08-14T05:46:04.000Z" itemprop="datePublished">8月 13 2014</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Translation/">Translation</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014-08-13-OpenSource-OpenResume.html">IT生涯：参与开源将为你的简历画上漂亮的一笔</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>先别急着把你的纸版简历丢进垃圾桶，但是那些为开源项目做过贡献的开发者们会发现他们的代码将是他们事业飞黄腾达最好的工具。</strong>   </p>
+<p>来来先上一个IT式的幽默：你管一个刚刚把他/她的第六个补丁贡献给Linux内核的志愿者叫什么？   </p>
+<p><em>I WANT YOU</em>   </p>
+<p>知道笑点在哪不？来来请允许我们的Linux基金会的伙计来解释一下：”这个‘笑话’的意思是一个Linux外行是不会贡献超过5个补丁给内核的，因为一旦他贡献超过5个，那他就将得到一份工作了。它其实不是一个笑话，我已经看到这样的事情发生过无数次了。“   </p>
+<p>这很可能是被那些实实在在参与开源项目或者组织的IT专业人士最容易忽视的一个好处之一：虽然开源的核心是合作与平民化，但是对于自我利益的提升也是非常有帮助的。尤其是对于开发者来，他们可以将他们的无偿开源工作转变为比传统简历或者猎头工具更具力量的专业头衔。<br>
+        
+          <p class="article-more-link">
+            <a href="/2014-08-13-OpenSource-OpenResume.html#more">阅读全文</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://modernsick.github.io/2014-08-13-OpenSource-OpenResume.html" data-id="664eqruhhlcgu1ee" class="article-share-link">分享到</a>
+      
+        <a href="http://modernsick.github.io/2014-08-13-OpenSource-OpenResume.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSDN-CODE/">CSDN CODE</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Opensource/">Opensource</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Translation/">Translation</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2014-08-12-String-Passby-Reference" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014-08-12-String-Passby-Reference.html" class="article-date">
+  <time datetime="2014-08-13T05:30:40.000Z" itemprop="datePublished">8月 12 2014</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Translation/">Translation</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014-08-12-String-Passby-Reference.html">Java中的String对象是“引用”传递的</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>这个问题在Java的开发过程中是个很经典的问题。在Stackoverflow上也出现过许多相似的问题，同时里面也充斥这许多不正确或者是不完整的答案。如果你不去想太深入的话，其实这个问题还是挺简单的。但是你稍微的深深一琢磨，它就会把你给搞糊涂了。   </p>
+<h2 id="1-_一段有趣&amp;迷糊人的代码">1. 一段有趣&amp;迷糊人的代码</h2>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span>(String[] args) {</div><div class="line">	String x = <span class="keyword">new</span> String(<span class="string">"ab"</span>);</div><div class="line">	change(x);</div><div class="line">	System.out.println(x);</div><div class="line">}</div><div class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">change</span>(String x) {</div><div class="line">	x = <span class="string">"cd"</span>;</div><div class="line">}</div></pre></td></tr></table></figure>
+
+
+
+<p>打印结果是“ab”<br><!--more--><br>在C++编程中，是这样的：   </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">void</span> change(string &x) {</div><div class="line">    x = <span class="string">"cd"</span>;</div><div class="line">}</div><div class="line"> </div><div class="line"><span class="keyword">int</span> main(){</div><div class="line">    string x = <span class="string">"ab"</span>;</div><div class="line">    change(x);</div><div class="line">    cout &lt;&lt; x &lt;&lt; endl;</div><div class="line">}</div></pre></td></tr></table></figure>
+
+
+
+<p>打印结果是“cd”   </p>
+
+        
+          <p class="article-more-link">
+            <a href="/2014-08-12-String-Passby-Reference.html#more">阅读全文</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://modernsick.github.io/2014-08-12-String-Passby-Reference.html" data-id="ivy7wkdaqjcicyq4" class="article-share-link">分享到</a>
+      
+        <a href="http://modernsick.github.io/2014-08-12-String-Passby-Reference.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java-Basics/">Java-Basics</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/String/">String</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Translation/">Translation</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2014-08-11-Why-JavaString-Immutability" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014-08-11-Why-JavaString-Immutability.html" class="article-date">
+  <time datetime="2014-08-11T14:00:40.000Z" itemprop="datePublished">8月 11 2014</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Translation/">Translation</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014-08-11-Why-JavaString-Immutability.html">Java中的String对象为什么是不可变的</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>String类型在Java中是不可变类型。不可变类型简单的理解就是它实例化之后的对象是不可修改的。所有的信息在这个对象创建的时候就被初始化好了，并且是不可以修改的。类的不可变性还是有许多的优点的。这篇文章咱就来唠嗑唠嗑为什么Java中的String类型被设计成了不可变的。对于这个问题完美的解释还得靠对存、同步、数据结构等的深刻认识。   </p>
+<h2 id="1-_对字符串池的需求">1. 对字符串池的需求</h2>
+<p>字符串池（字符串保留池）是方法区中的一个特殊存储区域。当一个字符串被创建并且这个字符串在字符串池中存在时，当前存在的字符串引用就会被返回并指向它，否则的话，就创建一个新的String对象并且返回它的引用。   </p>
+<p>下面的这段示例代码只会在堆内存中创建一个String对象。   </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">String string1 = <span class="string">"abcd"</span>;</div><div class="line">String string2 = <span class="string">"abcd"</span>;</div></pre></td></tr></table></figure>
+
+
+
+<p>在内存中是这个样子的：   </p>
+<p><img src="http://www.programcreek.com/wp-content/uploads/2013/07/java-string-pool.jpeg">    </p>
+<p>那咱假如String类型是可变的，那么通过其中一个引用来改变它所指向的String对象，将会导致另一个指向这个String对象的引用指向错误的字符串对象。   </p>
+<p>
+        
+          <p class="article-more-link">
+            <a href="/2014-08-11-Why-JavaString-Immutability.html#more">阅读全文</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://modernsick.github.io/2014-08-11-Why-JavaString-Immutability.html" data-id="j7h4akfhs29k9k5v" class="article-share-link">分享到</a>
+      
+        <a href="http://modernsick.github.io/2014-08-11-Why-JavaString-Immutability.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java-Basics/">Java-Basics</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/String/">String</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Translation/">Translation</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2014-08-11-Java-String-Immutability" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014-08-11-Java-String-Immutability.html" class="article-date">
+  <time datetime="2014-08-11T13:15:20.000Z" itemprop="datePublished">8月 11 2014</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Translation/">Translation</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014-08-11-Java-String-Immutability.html">图表展示Java中String类型的不可变性</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>来先看下面的一组图演示Java中String类型的不可变性。   </p>
+<h2 id="1-_声明一个字符串对象">1. 声明一个字符串对象</h2>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">String s = <span class="string">"abcd"</span>;</div></pre></td></tr></table></figure>
+
+<p>这个变量s存储的是这个String对象的引用。下面图中的箭头应该被解释成“存着谁谁谁的引用”。   </p>
+<p><img src="http://www.programcreek.com/wp-content/uploads/2009/02/String-Immutability-1.jpeg">   </p>
+<p>
+        
+          <p class="article-more-link">
+            <a href="/2014-08-11-Java-String-Immutability.html#more">阅读全文</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://modernsick.github.io/2014-08-11-Java-String-Immutability.html" data-id="hbqxo1878df1n3ys" class="article-share-link">分享到</a>
+      
+        <a href="http://modernsick.github.io/2014-08-11-Java-String-Immutability.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java-Basics/">Java-Basics</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/String/">String</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Translation/">Translation</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2014-07-26-Wiki-Motio-Home" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014-07-26-Wiki-Motio-Home.html" class="article-date">
+  <time datetime="2014-07-27T00:22:42.000Z" itemprop="datePublished">7月 26 2014</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Translation/">Translation</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014-07-26-Wiki-Motio-Home.html">Motio-Home</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Home_English_Version"><a href="https://github.com/Darsain/motio/wiki/Home" target="_blank" rel="external">Home English Version</a></h3>
+<hr>
+<h3 id="Markup"><a href="/2014-07-26-Wiki-Motio-Markup.html">Markup</a></h3>
+<p>HTML/CSS应该是什么样的。</p>
+<h3 id="Calling"><a href="/2014-07-26-Wiki-Motio-Calling.html">Calling</a></h3>
+<p>
+        
+          <p class="article-more-link">
+            <a href="/2014-07-26-Wiki-Motio-Home.html#more">阅读全文</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://modernsick.github.io/2014-07-26-Wiki-Motio-Home.html" data-id="d8o07pvdo3sgkc2c" class="article-share-link">分享到</a>
+      
+        <a href="http://modernsick.github.io/2014-07-26-Wiki-Motio-Home.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Motio/">Motio</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Translation/">Translation</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Wiki/">Wiki</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2014-07-26-Wiki-Motio-Properties" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014-07-26-Wiki-Motio-Properties.html" class="article-date">
+  <time datetime="2014-07-27T00:06:42.000Z" itemprop="datePublished">7月 26 2014</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Translation/">Translation</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014-07-26-Wiki-Motio-Properties.html">Motio-Properties</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="Motio-Home.html">Home Chinese</a></p>
+<h2 id="Properties_English_Version"><a href="https://github.com/Darsain/motio/wiki/Properties" target="_blank" rel="external">Properties English Version</a></h2>
+<p>Motio对象拥有一些有用的属性。假设：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> motio = <span class="keyword">new</span> Motio(frame, options);</div></pre></td></tr></table></figure>
+
+<p>
+        
+          <p class="article-more-link">
+            <a href="/2014-07-26-Wiki-Motio-Properties.html#more">阅读全文</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://modernsick.github.io/2014-07-26-Wiki-Motio-Properties.html" data-id="hjtr5lxnq6a7yw6l" class="article-share-link">分享到</a>
+      
+        <a href="http://modernsick.github.io/2014-07-26-Wiki-Motio-Properties.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Motio/">Motio</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Translation/">Translation</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Wiki/">Wiki</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2014-07-26-Wiki-Motio-Options" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014-07-26-Wiki-Motio-Options.html" class="article-date">
+  <time datetime="2014-07-26T22:41:42.000Z" itemprop="datePublished">7月 26 2014</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Translation/">Translation</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014-07-26-Wiki-Motio-Options.html">Motio-Options</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="Motio-Home.html">Home Chinese</a></p>
+<h2 id="Options_English_Version"><a href="https://github.com/Darsain/motio/wiki/Options" target="_blank" rel="external">Options English Version</a></h2>
+<p>所有的默认值都存放在<strong><code>Motio.defaults</code></strong> 这个对象里。 你可以方便的设置它的默认值：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Motio.defaults.fps = <span class="number">60</span>;</div></pre></td></tr></table></figure>
+
+<p>默认情况下Motio的所有特性都被设置为为启用的。用默认值来初始化一个Motio对象你会得到一个静止的什么都干的动画。<br>
+        
+          <p class="article-more-link">
+            <a href="/2014-07-26-Wiki-Motio-Options.html#more">阅读全文</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://modernsick.github.io/2014-07-26-Wiki-Motio-Options.html" data-id="1s6vqqbr81aw6kiq" class="article-share-link">分享到</a>
+      
+        <a href="http://modernsick.github.io/2014-07-26-Wiki-Motio-Options.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Motio/">Motio</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Translation/">Translation</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Wiki/">Wiki</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2014-07-26-Wiki-Motio-Methods" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014-07-26-Wiki-Motio-Methods.html" class="article-date">
+  <time datetime="2014-07-26T20:28:42.000Z" itemprop="datePublished">7月 26 2014</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Translation/">Translation</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014-07-26-Wiki-Motio-Methods.html">Motio-Methods</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="Motio-Home.html">Home Chinese</a></p>
+<h2 id="Methods_English_Version"><a href="https://github.com/Darsain/motio/wiki/Methods" target="_blank" rel="external">Methods English Version</a></h2>
+<p>Motio拥有非常方便且使用的方法。你可以通过一个<a href="https://github.com/Darsain/motio/wiki/Calling" target="_blank" rel="external"><strong><code>new Motio</code></strong></a>来直接调用它们。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> motio = <span class="keyword">new</span> Motio(frame, options);</div><div class="line"><span class="comment">// Play method call</span></div><div class="line">motio.play();</div></pre></td></tr></table></figure>
+
+<p>
+        
+          <p class="article-more-link">
+            <a href="/2014-07-26-Wiki-Motio-Methods.html#more">阅读全文</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://modernsick.github.io/2014-07-26-Wiki-Motio-Methods.html" data-id="e4uxvgymhpezxq64" class="article-share-link">分享到</a>
+      
+        <a href="http://modernsick.github.io/2014-07-26-Wiki-Motio-Methods.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Motio/">Motio</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Translation/">Translation</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Wiki/">Wiki</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/tags/Translation/page/2/">2</a><a class="extend next" rel="next" href="/tags/Translation/page/2/">Next &raquo;</a>
+    </nav>
+  
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Development/">Development</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Translation/">Translation</a><span class="category-list-count">13</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSDN-CODE/">CSDN CODE</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ImportNew/">ImportNew</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java-Basics/">Java-Basics</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Motio/">Motio</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Opensource/">Opensource</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/String/">String</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TexturePacker/">TexturePacker</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Translation/">Translation</a><span class="tag-list-count">13</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Useful-Site/">Useful Site</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Wiki/">Wiki</a><span class="tag-list-count">7</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/CSDN-CODE/" style="font-size: 10.00px;">CSDN CODE</a><a href="/tags/ImportNew/" style="font-size: 10.00px;">ImportNew</a><a href="/tags/Java/" style="font-size: 13.33px;">Java</a><a href="/tags/Java-Basics/" style="font-size: 13.33px;">Java-Basics</a><a href="/tags/Motio/" style="font-size: 16.67px;">Motio</a><a href="/tags/Opensource/" style="font-size: 10.00px;">Opensource</a><a href="/tags/String/" style="font-size: 13.33px;">String</a><a href="/tags/TexturePacker/" style="font-size: 10.00px;">TexturePacker</a><a href="/tags/Translation/" style="font-size: 20.00px;">Translation</a><a href="/tags/Useful-Site/" style="font-size: 10.00px;">Useful Site</a><a href="/tags/Wiki/" style="font-size: 16.67px;">Wiki</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/08">August 2014</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07">July 2014</a><span class="archive-list-count">9</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">近期文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2014-08-14-Web-Service-Monitor-101.html">网络服务监控101：识别不良部署</a>
+          </li>
+        
+          <li>
+            <a href="/2014-08-14-Java-String-Top10.html">Top10 - Java中关于String类型的10个问题</a>
+          </li>
+        
+          <li>
+            <a href="/2014-08-13-OpenSource-OpenResume.html">IT生涯：参与开源将为你的简历画上漂亮的一笔</a>
+          </li>
+        
+          <li>
+            <a href="/2014-08-12-String-Passby-Reference.html">Java中的String对象是“引用”传递的</a>
+          </li>
+        
+          <li>
+            <a href="/2014-08-11-Why-JavaString-Immutability.html">Java中的String对象为什么是不可变的</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    <div class="widget-wrap">
+    <h3 class="widget-title">新浪微博</h3>
+    <div class="widget">
+     <iframe width="100%" height="550" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=550&fansRow=2&ptype=1&speed=0&skin=1&isTitle=0&noborder=0&isWeibo=1&isFans=0&uid=1240132317&verifier=0804ddd3&colors=ffffff,ffffff,000000,ed1c24,f0f0f0&dpc=1"></iframe>
+    </div>
+  </div>
+
+  
+     <div class="widget-wrap">
+    <h3 class="widget-title">谷歌广告</h3>
+    <div class="widget">
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<!-- responsiveadd -->
+		<ins class="adsbygoogle"
+			 style="display:block"
+			 data-ad-client="ca-pub-4689166551244949"
+			 data-ad-slot="8588607719"
+			 data-ad-format="auto"></ins>
+		<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+    </div>
+</div>
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">友情链接</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="http://themes.xiguabaobao.com" target="_blank">主题作者</a>
+          </li>
+        
+          <li>
+            <a href="http://www.jobbole.com/members/strongme" target="_blank">伯乐在线</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2014 <a href="mailto:strongwalter2014@gmail.com">Strong Walter</a><br>
+      Powered by <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a>
+      .
+      Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape+</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'duoshuo';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//go.disqus.com/count.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>

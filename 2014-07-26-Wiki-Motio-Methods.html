@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Motio-Methods | 译林</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Home Chinese
+Methods English Version
+Motio拥有非常方便且使用的方法。你可以通过一个new Motio来直接调用它们。
+123var motio = new Motio(frame, options);// Play method callmotio.play();">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Motio-Methods">
+<meta property="og:url" content="http://modernsick.github.io/2014-07-26-Wiki-Motio-Methods.html">
+<meta property="og:site_name" content="译林">
+<meta property="og:description" content="Home Chinese
+Methods English Version
+Motio拥有非常方便且使用的方法。你可以通过一个new Motio来直接调用它们。
+123var motio = new Motio(frame, options);// Play method callmotio.play();">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Motio-Methods">
+<meta name="twitter:description" content="Home Chinese
+Methods English Version
+Motio拥有非常方便且使用的方法。你可以通过一个new Motio来直接调用它们。
+123var motio = new Motio(frame, options);// Play method callmotio.play();">
+<link rel="publisher" href="106095858443703270000">
+
+  
+    <link rel="alternative" href="/atom.xml" title="译林" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+  <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-53221362-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">译林</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">坚持，就是胜利</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="http://www.baidu.com/baidu" method="get" accept-charset="utf-8" class="search-form">
+          <input type="search" name="word" maxlength="20" class="search-form-input" placeholder="Search">
+          <input type="submit" value="" class="search-form-submit">
+          <input name=tn type=hidden value="bds">
+          <input name=cl type=hidden value="3">
+          <input name=ct type=hidden value="2097152">
+          <input type="hidden" name="si" value="modernsick.github.io">
+        </form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-2014-07-26-Wiki-Motio-Methods" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014-07-26-Wiki-Motio-Methods.html" class="article-date">
+  <time datetime="2014-07-26T20:28:42.000Z" itemprop="datePublished">7月 26 2014</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Translation/">Translation</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Motio-Methods
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="Motio-Home.html">Home Chinese</a></p>
+<h2 id="Methods_English_Version"><a href="https://github.com/Darsain/motio/wiki/Methods" target="_blank" rel="external">Methods English Version</a></h2>
+<p>Motio拥有非常方便且使用的方法。你可以通过一个<a href="https://github.com/Darsain/motio/wiki/Calling" target="_blank" rel="external"><strong><code>new Motio</code></strong></a>来直接调用它们。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> motio = <span class="keyword">new</span> Motio(frame, options);</div><div class="line"><span class="comment">// Play method call</span></div><div class="line">motio.play();</div></pre></td></tr></table></figure>
+
+<p><a id="more"></a><br>在不设置或者调用特殊方法的情况下，Motio的每次调用都会返回它本身，这样你如果你愿意的话就可以进行链式编程调用了。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">motio.on(<span class="string">'frame'</span>, callback).set(<span class="string">'speedX'</span>, <span class="number">50</span>).play();</div></pre></td></tr></table></figure>
+
+<h4 id="通过jQuery代理来调用Motio方法"><strong>通过jQuery代理来调用Motio方法</strong></h4>
+<p>如果你在使用Motio的jQuery版本插件的话，你还可以像如下演示一样通过jQuery代理对象来进行调用：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">'#frame'</span>).motio(<span class="string">'methodName'</span> [, <span class="built_in">arguments</span>... ] );</div></pre></td></tr></table></figure>
+
+<p>假设已经有一个Motio对象与<strong><code>$(&#39;#frame&#39;)</code></strong>进行了关联。这种关联是通过<a href="https://github.com/Darsain/motio/wiki/Calling#calling-via-jquery-plugin" target="_blank" rel="external">jQuery插件来调用Motio</a>的时候发生的。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">'#frame'</span>).motio(<span class="string">'toEnd'</span>, callbackFunction);</div></pre></td></tr></table></figure>
+
+<h2 id="Methods"><strong>Methods</strong></h2>
+<h3 id="play"><strong>play</strong></h3>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">motio.play( [ reverse ] );</div></pre></td></tr></table></figure>
+
+<p>启动一个只有被另外操作才能打断的持续播放的动画。</p>
+<ul>
+<li><strong>reverse:</strong> <code>Boolean</code> 传入<strong><code>true</code></strong>值可以使动画按照反方向进行播放。</li>
+</ul>
+<p><strong><code>reverse</code></strong>树形只在Sprite Based模式下的动画才会起作用。而panning animation的方向是通过传入一个正数或者一个负数设置<strong><code>speeX</code></strong> 或者是 <strong><code>speedY</code></strong> 来控制的。</p>
+<h3 id="暂停_pause"><strong>暂停 pause</strong></h3>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">motio.pause();</div></pre></td></tr></table></figure>
+
+<p>暂停当前在播放的动画。</p>
+<h3 id="交替_toggle"><strong>交替 toggle</strong></h3>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">motio.toggle();</div></pre></td></tr></table></figure>
+
+<p>当前状态为播放便暂停，反之…</p>
+<h3 id="toStart"><strong>toStart</strong></h3>
+<p><em>仅仅在sprite animation模式下起作用</em></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">motio.toStart([immediate][,callback])</div></pre></td></tr></table></figure>
+
+<p>将动画置于第一帧，并且暂停动画。如果第一帧已经被激活，那么动画将会从最后一帧开始重复播放这个动画。</p>
+<ul>
+<li><strong>immediate</strong> <code>Boolean</code> 是否直接激活动画的最后一帧，并且略过这个动画。</li>
+<li><strong>callback</strong> <code>Function</code> 当动画执行到最后一帧之后要执行的回调函数。</li>
+</ul>
+<p>如果在中途这个动画被中断了，那么这个 回调函数就不会被执行。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">motio.toStart(<span class="literal">true</span>); <span class="comment">// Activate first frame immediately without animation.</span></div><div class="line">motio.toStart(callback); <span class="comment">// Execute callback when animation reaches the destination.</span></div><div class="line">motio.toStart(<span class="literal">true</span>, callback); <span class="comment">// Combination of both arguments.</span></div></pre></td></tr></table></figure>
+
+<h3 id="toEnd"><strong>toEnd</strong></h3>
+<p><em>仅仅在sprite animation模式下起作用</em></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">motio.toEnd([immediate][,callback])</div></pre></td></tr></table></figure>
+
+<p>将动画置于最后一帧，并且暂停动画。如果最后一帧动画已经被激活，那么将会从第一帧开始重复播放动画。</p>
+<ul>
+<li><strong>immediate</strong> <code>Boolean</code> 是否直接激活动画的最后一帧，并且略过这个动画。</li>
+<li><strong>callback</strong> <code>Function</code> 当动画执行到最后一帧之后要执行的回调函数。</li>
+</ul>
+<p>如果在中途这个动画被中断了，那么这个 回调函数就不会被执行。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">motio.toEnd(<span class="literal">true</span>); <span class="comment">// Activate last frame immediately without animation.</span></div><div class="line">motio.toEnd(callback); <span class="comment">// Execute callback when animation reaches the destination.</span></div><div class="line">motio.toEnd(<span class="literal">true</span>, callback); <span class="comment">// Combination of both arguments.</span></div></pre></td></tr></table></figure>
+
+<h3 id="to"><strong>to</strong></h3>
+<p><em>仅仅在sprite animation模式下起作用</em></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">motio.to( frame, [ immediate ] [, callback] );</div></pre></td></tr></table></figure>
+
+
+
+<p>让动画执行到指定的帧数，并且暂停动画。</p>
+<ul>
+<li><strong>frame</strong> <code>Integer</code> 要执行到的目标帧数，从<code>0</code>开始</li>
+<li><strong>immediate</strong> <code>Boolean</code> 是否里面执行到最后一帧，并且跳过动画。</li>
+<li><strong>callback</strong> <code>Function</code> 当动画执行到最后一帧之后要执行的回调函数。</li>
+</ul>
+<p>如果在中途这个动画被中断了，那么这个 回调函数就不会被执行。</p>
+<p>如果要跳到的那一帧即是当前被激活的这一帧，那么动画会暂停，并且立马执行回调函数。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">motio.to(<span class="number">2</span>, <span class="literal">true</span>); <span class="comment">// Activate 3rd frame immediately without animation.</span></div><div class="line">motio.to(<span class="number">2</span>, callback); <span class="comment">// Execute callback when animation reaches the 3rd frame.</span></div><div class="line">motio.to(<span class="number">2</span>, <span class="literal">true</span>, callback); <span class="comment">// Combination of both arguments.</span></div></pre></td></tr></table></figure>
+
+<h3 id="set"><strong>set</strong></h3>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">motio.set(name.value);</div></pre></td></tr></table></figure>
+
+<p>设置指定属性到指定的值。</p>
+<ul>
+<li><strong>name</strong> <code>String</code> 要设置的属性名称</li>
+<li><strong>value</strong> <code>Mixed</code> 要 设置的新的属性值</li>
+</ul>
+<p>只有如下的几个树形可以进行动态设置：</p>
+<ul>
+<li>fps</li>
+<li>speedX</li>
+<li>speedY</li>
+</ul>
+<p>例如：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">motio.set(<span class="string">'speedX'</span>,<span class="number">10</span>);</div></pre></td></tr></table></figure>
+
+<h3 id="on"><strong>on</strong></h3>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">motio.set(eventName.callback);</div></pre></td></tr></table></figure>
+
+
+
+<p>为单个或者多个Motio事件设置回调函数。所有可以注册的事件，以及事件接受的参数都可以在这里找到： <a href="https://github.com/Darsain/motio/wiki/Events" target="_blank" rel="external">Events documentation</a>。</p>
+<ul>
+<li><strong>eventName</strong> <code>Mixed</code>  事件的名称，或者是回调函数的Map对象</li>
+<li><strong>callback</strong> <code>Mixed</code> 单个回调方法，或者是回调函数数组</li>
+</ul>
+<p>例如：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Basic usage</span></div><div class="line">motio.on(<span class="string">'frame'</span>, <span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>{});</div><div class="line"></div><div class="line"><span class="comment">// Multiple events, one callback</span></div><div class="line">motio.on(<span class="string">'play pause'</span>, <span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>{});</div><div class="line"></div><div class="line"><span class="comment">// Multiple callbacks for multiple events</span></div><div class="line">motio.on(<span class="string">'play pause'</span>, [</div><div class="line">	<span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>{},</div><div class="line">	<span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>{}</div><div class="line">]);</div><div class="line"></div><div class="line"><span class="comment">// Callback map object</span></div><div class="line">motio.on({</div><div class="line">	play: <span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>{},</div><div class="line">	frame: [</div><div class="line">		<span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>{},</div><div class="line">		<span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>{}</div><div class="line">	]</div><div class="line">});</div></pre></td></tr></table></figure>
+
+
+
+<h3 id="off"><strong>off</strong></h3>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">motio.off(eventName[.callback]);</div></pre></td></tr></table></figure>
+
+<p>去掉某个事件的一个、多个或者是全部回调函数。</p>
+<ul>
+<li><strong>eventName</strong> <code>Mixed</code>  事件的名称</li>
+<li><strong>callback</strong> <code>Mixed</code> 单个要移除回调方法，或者是回调函数数组，默认是全部清除</li>
+</ul>
+<p>例如：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Removes one callback from load event</span></div><div class="line">motio.off(<span class="string">'load'</span>, fn1);</div><div class="line"></div><div class="line"><span class="comment">// Removes one callback from multiple events</span></div><div class="line">motio.off(<span class="string">'load move'</span>, fn1);</div><div class="line"></div><div class="line"><span class="comment">// Removes multiple callbacks from multiple event</span></div><div class="line">motio.off(<span class="string">'load move'</span>, [ fn1, fn2 ]);</div><div class="line"></div><div class="line"><span class="comment">// Removes all callbacks from load event</span></div><div class="line">motio.off(<span class="string">'load'</span>);</div></pre></td></tr></table></figure>
+
+<h3 id="destroy"><strong>destroy</strong></h3>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">motio.destroy();</div></pre></td></tr></table></figure>
+
+<p>暂停动画，并且将元素的背景图片位置设置到 <code>0 0</code>的位置。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://modernsick.github.io/2014-07-26-Wiki-Motio-Methods.html" data-id="e4uxvgymhpezxq64" class="article-share-link">分享到</a>
+      
+        <a href="http://modernsick.github.io/2014-07-26-Wiki-Motio-Methods.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Motio/">Motio</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Translation/">Translation</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Wiki/">Wiki</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2014-07-26-Wiki-Motio-Options.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Motio-Options
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2014-07-26-Wiki-Motio-Markup.html" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Motio-Markup</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+  <!-- 多说评论框 start -->
+	<div id="disqus_thread" class="ds-thread" data-thread-key="e4uxvgymhpezxq64" data-title="Motio-Methods" data-url="http://modernsick.github.io/2014-07-26-Wiki-Motio-Methods.html"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"strongme"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</section>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Development/">Development</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Translation/">Translation</a><span class="category-list-count">13</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSDN-CODE/">CSDN CODE</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ImportNew/">ImportNew</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java-Basics/">Java-Basics</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Motio/">Motio</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Opensource/">Opensource</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/String/">String</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TexturePacker/">TexturePacker</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Translation/">Translation</a><span class="tag-list-count">13</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Useful-Site/">Useful Site</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Wiki/">Wiki</a><span class="tag-list-count">7</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/CSDN-CODE/" style="font-size: 10.00px;">CSDN CODE</a><a href="/tags/ImportNew/" style="font-size: 10.00px;">ImportNew</a><a href="/tags/Java/" style="font-size: 13.33px;">Java</a><a href="/tags/Java-Basics/" style="font-size: 13.33px;">Java-Basics</a><a href="/tags/Motio/" style="font-size: 16.67px;">Motio</a><a href="/tags/Opensource/" style="font-size: 10.00px;">Opensource</a><a href="/tags/String/" style="font-size: 13.33px;">String</a><a href="/tags/TexturePacker/" style="font-size: 10.00px;">TexturePacker</a><a href="/tags/Translation/" style="font-size: 20.00px;">Translation</a><a href="/tags/Useful-Site/" style="font-size: 10.00px;">Useful Site</a><a href="/tags/Wiki/" style="font-size: 16.67px;">Wiki</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/08">August 2014</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07">July 2014</a><span class="archive-list-count">9</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">近期文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2014-08-14-Web-Service-Monitor-101.html">网络服务监控101：识别不良部署</a>
+          </li>
+        
+          <li>
+            <a href="/2014-08-14-Java-String-Top10.html">Top10 - Java中关于String类型的10个问题</a>
+          </li>
+        
+          <li>
+            <a href="/2014-08-13-OpenSource-OpenResume.html">IT生涯：参与开源将为你的简历画上漂亮的一笔</a>
+          </li>
+        
+          <li>
+            <a href="/2014-08-12-String-Passby-Reference.html">Java中的String对象是“引用”传递的</a>
+          </li>
+        
+          <li>
+            <a href="/2014-08-11-Why-JavaString-Immutability.html">Java中的String对象为什么是不可变的</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    <div class="widget-wrap">
+    <h3 class="widget-title">新浪微博</h3>
+    <div class="widget">
+     <iframe width="100%" height="550" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=550&fansRow=2&ptype=1&speed=0&skin=1&isTitle=0&noborder=0&isWeibo=1&isFans=0&uid=1240132317&verifier=0804ddd3&colors=ffffff,ffffff,000000,ed1c24,f0f0f0&dpc=1"></iframe>
+    </div>
+  </div>
+
+  
+     <div class="widget-wrap">
+    <h3 class="widget-title">谷歌广告</h3>
+    <div class="widget">
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<!-- responsiveadd -->
+		<ins class="adsbygoogle"
+			 style="display:block"
+			 data-ad-client="ca-pub-4689166551244949"
+			 data-ad-slot="8588607719"
+			 data-ad-format="auto"></ins>
+		<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+    </div>
+</div>
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">友情链接</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="http://themes.xiguabaobao.com" target="_blank">主题作者</a>
+          </li>
+        
+          <li>
+            <a href="http://www.jobbole.com/members/strongme" target="_blank">伯乐在线</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2014 <a href="mailto:strongwalter2014@gmail.com">Strong Walter</a><br>
+      Powered by <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a>
+      .
+      Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape+</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'duoshuo';
+  
+  var disqus_url = 'http://modernsick.github.io/2014-07-26-Wiki-Motio-Methods.html';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>

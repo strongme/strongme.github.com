@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Motio-Markup | 译林</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Home Chinese
+Markup English Version
+Motio通过改变传进来的元素的background-position来实现动画效果。背景图片可以是一张无缝的整体图片（panning animation）或者也可以是一张有连续动作的静态帧图片（sprite based animation）。
+例如：
+12&lt;div id='panning' class='panning">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Motio-Markup">
+<meta property="og:url" content="http://modernsick.github.io/2014-07-26-Wiki-Motio-Markup.html">
+<meta property="og:site_name" content="译林">
+<meta property="og:description" content="Home Chinese
+Markup English Version
+Motio通过改变传进来的元素的background-position来实现动画效果。背景图片可以是一张无缝的整体图片（panning animation）或者也可以是一张有连续动作的静态帧图片（sprite based animation）。
+例如：
+12&lt;div id='panning' class='panning">
+<meta property="og:image" content="http://i.imgur.com/Sazfe0Q.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Motio-Markup">
+<meta name="twitter:description" content="Home Chinese
+Markup English Version
+Motio通过改变传进来的元素的background-position来实现动画效果。背景图片可以是一张无缝的整体图片（panning animation）或者也可以是一张有连续动作的静态帧图片（sprite based animation）。
+例如：
+12&lt;div id='panning' class='panning">
+<link rel="publisher" href="106095858443703270000">
+
+  
+    <link rel="alternative" href="/atom.xml" title="译林" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+  <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
+  
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-53221362-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">译林</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">坚持，就是胜利</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="http://www.baidu.com/baidu" method="get" accept-charset="utf-8" class="search-form">
+          <input type="search" name="word" maxlength="20" class="search-form-input" placeholder="Search">
+          <input type="submit" value="" class="search-form-submit">
+          <input name=tn type=hidden value="bds">
+          <input name=cl type=hidden value="3">
+          <input name=ct type=hidden value="2097152">
+          <input type="hidden" name="si" value="modernsick.github.io">
+        </form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-2014-07-26-Wiki-Motio-Markup" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014-07-26-Wiki-Motio-Markup.html" class="article-date">
+  <time datetime="2014-07-26T18:31:19.000Z" itemprop="datePublished">7月 26 2014</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Translation/">Translation</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Motio-Markup
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="Motio-Home.html">Home Chinese</a></p>
+<h2 id="Markup_English_Version"><a href="https://github.com/Darsain/motio/wiki/Markup" target="_blank" rel="external">Markup English Version</a></h2>
+<p>Motio通过改变传进来的元素的<strong><code>background-position</code></strong>来实现动画效果。背景图片可以是一张无缝的整体图片（panning animation）或者也可以是一张有连续动作的静态帧图片（sprite based animation）。</p>
+<h3 id="例如：">例如：</h3>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"panning"</span> <span class="attribute">class</span>=<span class="value">"panning"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"sprite"</span> <span class="attribute">class</span>=<span class="value">"sprite"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></div></pre></td></tr></table></figure>
+
+<p><a id="more"></a><br>背景图片的尺寸可以通过定义样式文件来设置。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">.panning {</div><div class="line">	width: auto; // Span to the full width of container</div><div class="line">	height: 300px;</div><div class="line">	background: url('repeating_sky.jpg');</div><div class="line">}</div><div class="line"></div><div class="line">.sprite {</div><div class="line">	width: 256px; // Width of one animation frame</div><div class="line">	height: 256px; // Height of one animation frame</div><div class="line">	background: url('animation_frames_sprite.png');</div><div class="line">}</div></pre></td></tr></table></figure>
+
+<p>然后Motio通过下面的方式来调用动画：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Panning</span></div><div class="line"><span class="keyword">var</span> panning = <span class="keyword">new</span> Motio(<span class="built_in">document</span>.getElementById(<span class="string">'panning'</span>), {</div><div class="line">	fps: <span class="number">30</span>, <span class="comment">// Frames per second. More fps = higher CPU load.</span></div><div class="line">	speedX: -<span class="number">30</span> <span class="comment">// Negative horizontal speed = panning to left.</span></div><div class="line">});</div><div class="line">panning.play(); <span class="comment">// Start playing animation</span></div><div class="line"></div><div class="line"><span class="comment">// Sprite</span></div><div class="line"><span class="keyword">var</span> sprite = <span class="keyword">new</span> Motio(<span class="built_in">document</span>.getElementById(<span class="string">'sprite'</span>), {</div><div class="line">	fps: <span class="number">10</span>, <span class="comment">// Frames per second. More fps = higher CPU load.</span></div><div class="line">	frames: <span class="number">14</span> <span class="comment">// Number of animation frames in sprite</span></div><div class="line">});</div><div class="line">sprite.play(); <span class="comment">// Start playing animation</span></div></pre></td></tr></table></figure>
+
+<p>当设置了<strong><code>frames</code></strong>属性之后Motio就知道要使用的动画是基于子画面切换的（sprite based）</p>
+<p>通过jQuery代理来调用Motio动画是不需要在初始化的时候设置调用<strong><code>.play()</code></strong> 方法的。<br>在上面的例子中Motio是在调用<strong><code>new Motio</code></strong> 实例化之后自动进行的初始化操作。Motio会假设你仅仅是使用jQuery插件来初始化动画然后就没有然后了。即使可以通过jQuery代理来调用方法或者是操作动画，那也看起来没意义啊。已经有了<strong><code>new Motio</code></strong>，为什么还要去拿到所有元素的代理对象呢？</p>
+<p>想知道更多关于方法和属性或者其他所有信息看这里 <a href="https://github.com/Darsain/motio/wiki" target="_blank" rel="external">RTFM</a>。</p>
+<h2 id="平移_Panning"><strong>平移 Panning</strong></h2>
+<p>对于平移模式的动画来说，没有任何的规则，只需要给元素设置一个背景，然后将元素传给Motio就OK了。</p>
+<h2 id="子画面？_Sprite（不会翻译哦，求指教）"><strong>子画面？ Sprite</strong>（不会翻译哦，求指教）</h2>
+<p>如果想要一副可以正确播放的Sprite based动画，你必须设置你的背景图片的每一格画面都是等大小的。例如：</p>
+<p><img src="http://i.imgur.com/Sazfe0Q.png"></p>
+<p>这就意味着你要放置动画的的宽度和长度，必须和背景图片中的单个子画面的宽度和长度一样一样的。元素的长宽你可以通过样式文件来设置。你可以设置<strong><code>padding</code></strong>、<strong><code>margin</code></strong>、<strong><code>border</code></strong>，只要你设置的<strong><code>border-box</code></strong>的尺寸和背景图片的单个子画面尺寸一样，Motio就可以照常工作。唯一会导致Motio不正常工作的操作就是改变背景图片的<strong><code>background-origin</code></strong>属性，所以千万别碰它。</p>
+<p>同时调用隐藏起来的元素去执行Motio动画是不会成功的，因为Motio都没办法获取元素的尺寸。这种情况下可以通过设置 <a href="https://github.com/Darsain/motio/wiki/Options#width" target="_blank" rel="external"><code>width</code></a> &amp; <a href="https://github.com/Darsain/motio/wiki/Options#height" target="_blank" rel="external"><code>height</code></a> 属性来手动进行操作。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://modernsick.github.io/2014-07-26-Wiki-Motio-Markup.html" data-id="8il985zxbfooj6y7" class="article-share-link">分享到</a>
+      
+        <a href="http://modernsick.github.io/2014-07-26-Wiki-Motio-Markup.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Motio/">Motio</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Translation/">Translation</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Wiki/">Wiki</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2014-07-26-Wiki-Motio-Methods.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Motio-Methods
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2014-07-26-Wiki-Motio-Events.html" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Motio-Events</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+  <!-- 多说评论框 start -->
+	<div id="disqus_thread" class="ds-thread" data-thread-key="8il985zxbfooj6y7" data-title="Motio-Markup" data-url="http://modernsick.github.io/2014-07-26-Wiki-Motio-Markup.html"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"strongme"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</section>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Development/">Development</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Translation/">Translation</a><span class="category-list-count">13</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSDN-CODE/">CSDN CODE</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ImportNew/">ImportNew</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java-Basics/">Java-Basics</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Motio/">Motio</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Opensource/">Opensource</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/String/">String</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TexturePacker/">TexturePacker</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Translation/">Translation</a><span class="tag-list-count">13</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Useful-Site/">Useful Site</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Wiki/">Wiki</a><span class="tag-list-count">7</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/CSDN-CODE/" style="font-size: 10.00px;">CSDN CODE</a><a href="/tags/ImportNew/" style="font-size: 10.00px;">ImportNew</a><a href="/tags/Java/" style="font-size: 13.33px;">Java</a><a href="/tags/Java-Basics/" style="font-size: 13.33px;">Java-Basics</a><a href="/tags/Motio/" style="font-size: 16.67px;">Motio</a><a href="/tags/Opensource/" style="font-size: 10.00px;">Opensource</a><a href="/tags/String/" style="font-size: 13.33px;">String</a><a href="/tags/TexturePacker/" style="font-size: 10.00px;">TexturePacker</a><a href="/tags/Translation/" style="font-size: 20.00px;">Translation</a><a href="/tags/Useful-Site/" style="font-size: 10.00px;">Useful Site</a><a href="/tags/Wiki/" style="font-size: 16.67px;">Wiki</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/08">August 2014</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07">July 2014</a><span class="archive-list-count">9</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">近期文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2014-08-14-Web-Service-Monitor-101.html">网络服务监控101：识别不良部署</a>
+          </li>
+        
+          <li>
+            <a href="/2014-08-14-Java-String-Top10.html">Top10 - Java中关于String类型的10个问题</a>
+          </li>
+        
+          <li>
+            <a href="/2014-08-13-OpenSource-OpenResume.html">IT生涯：参与开源将为你的简历画上漂亮的一笔</a>
+          </li>
+        
+          <li>
+            <a href="/2014-08-12-String-Passby-Reference.html">Java中的String对象是“引用”传递的</a>
+          </li>
+        
+          <li>
+            <a href="/2014-08-11-Why-JavaString-Immutability.html">Java中的String对象为什么是不可变的</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    <div class="widget-wrap">
+    <h3 class="widget-title">新浪微博</h3>
+    <div class="widget">
+     <iframe width="100%" height="550" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=550&fansRow=2&ptype=1&speed=0&skin=1&isTitle=0&noborder=0&isWeibo=1&isFans=0&uid=1240132317&verifier=0804ddd3&colors=ffffff,ffffff,000000,ed1c24,f0f0f0&dpc=1"></iframe>
+    </div>
+  </div>
+
+  
+     <div class="widget-wrap">
+    <h3 class="widget-title">谷歌广告</h3>
+    <div class="widget">
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<!-- responsiveadd -->
+		<ins class="adsbygoogle"
+			 style="display:block"
+			 data-ad-client="ca-pub-4689166551244949"
+			 data-ad-slot="8588607719"
+			 data-ad-format="auto"></ins>
+		<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+    </div>
+</div>
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">友情链接</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="http://themes.xiguabaobao.com" target="_blank">主题作者</a>
+          </li>
+        
+          <li>
+            <a href="http://www.jobbole.com/members/strongme" target="_blank">伯乐在线</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2014 <a href="mailto:strongwalter2014@gmail.com">Strong Walter</a><br>
+      Powered by <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a>
+      .
+      Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape+</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'duoshuo';
+  
+  var disqus_url = 'http://modernsick.github.io/2014-07-26-Wiki-Motio-Markup.html';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>
